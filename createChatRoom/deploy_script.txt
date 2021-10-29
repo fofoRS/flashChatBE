@@ -1,0 +1,5 @@
+gcloud functions deploy CreateUser --ignore-file=.createUserIgnore  --runtime=go111 --trigger-http --allow-unauthenticated 
+gcloud functions deploy CreateRoomChat --ignore-file=misc/.crateRoomIgnore --runtime=go111 --trigger-http --allow-unauthenticated 
+gcloud functions deploy SyncUserOnRoomCreated --ignore-file=misc/.syncUserChatIgnore \
+    --runtime=go111 --trigger-event "providers/cloud.firestore/eventTypes/document.create" \
+    --trigger-resource "projects/flash-demo-chat-001/databases/(default)/documents/rooms/{roomId}" --allow-unauthenticated 

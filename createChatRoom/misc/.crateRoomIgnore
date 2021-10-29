@@ -1,0 +1,6 @@
+create_user_handler.go
+sync_user_room_chat_handler.go
+deploy_script.txt
+/internal/models/user.go
+/misc/.createUserIgnore
+/misc/.syncUserChatIgnore
